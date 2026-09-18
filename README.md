@@ -168,8 +168,11 @@ uv run python scripts/run_research.py --download --sensitivity
 uv run python scripts/execute_notebooks.py
 uv run python scripts/write_results.py
 uv run python scripts/build_article_assets.py
-uv run pytest -q
-uv run ruff check src scripts tests
+uv run python -m pytest -q
+uv run python -m ruff check src scripts tests
+uv run python scripts/check_artifacts.py
+uv run python scripts/export_evidence.py
+uv run python scripts/check_publication.py
 ```
 
 Downloads checkpoint each ticker in `data/raw/`. Subsequent runs use those snapshots, so the
@@ -189,3 +192,11 @@ SVGs are available for high-resolution use.
 In restricted environments, set `UV_CACHE_DIR=/tmp/svd-uv-cache` when invoking `uv`. Once the
 environment and data are available, `uv run --offline ...` avoids dependency-network requests.
 See the [validation record](docs/validation.md) for the research checks and their scope.
+
+## 19 September 2026 review
+
+The original source snapshot is saved on `old`; updates are on `renovation`. The review added
+raw-vintage rejection, independently executable accounting/eigensolver checks, generated sample
+metadata and CI. The existing August-end research design and SVD/PCA teaching material are
+retained. [Audit](research/AUDIT.md) · [Sources](research/SOURCES.md) · [Evidence](research/results/) ·
+[Publication review](PUBLICATION.md) · [Unrun next experiment](research/RESEARCH_AGENDA.md).

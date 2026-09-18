@@ -1,0 +1,18 @@
+[
+  {
+    "universe": "us_equity",
+    "sessions": 1527,
+    "strategies": 5,
+    "rebalances": 73,
+    "accounting": "passed",
+    "eigensolver_check": "passed"
+  },
+  {
+    "universe": "multi_asset",
+    "sessions": 1527,
+    "strategies": 5,
+    "rebalances": 73,
+    "accounting": "passed",
+    "eigensolver_check": "passed"
+  }
+]

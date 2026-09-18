@@ -1,13 +1,17 @@
 # Results: SVD covariance models and portfolio risk
 
-Executed historical ETF data, January 2, 2025–August 31, 2026: **416 test sessions**.
-Primary: 504-session window, rank 3, 30% cap, monthly rebalancing, 5 bps per dollar traded.
-Development portfolio evaluation: August 3, 2020–December 31, 2024.
-Price snapshots: July 2, 2018–August 31, 2026, 2,052 prices per instrument.
+Executed historical ETF data, 2025-01-02–2026-08-31:
+**416 test sessions**.
+Primary: 504-session window, rank 3,
+30% cap, monthly rebalancing, 5 bps per dollar traded.
+Development portfolio evaluation: 2020-08-03–2024-12-31.
+Price snapshots: 2018-07-02–2026-08-31,
+2,052 prices per instrument.
 
 This is a retrospective historical test, not a genuinely untouched holdout. Negative differences
 favor PCA. Intervals are pointwise paired circular block-bootstrap percentile intervals with
-21-session blocks and 2,000 resamples. They are conditional on the realized portfolio paths.
+21-session blocks and 2,000 resamples.
+They are conditional on the realized portfolio paths.
 
 | Universe | PCA volatility | Ledoit–Wolf volatility | Difference (pp) | 95% CI (pp) |
 | --- | --- | --- | --- | --- |
@@ -63,11 +67,12 @@ they are not risk-matched controls.
 
 ## Interpretation and source trail
 
-The primary sector result is small and its volatility interval includes zero. Several alternative
-settings reverse the sign. The multi-asset effect is small in absolute annualized volatility, and
-its primary interval excludes zero, but the portfolio is largely a constrained bond allocation.
-In both universes the common-portfolio forecast-loss interval includes zero. These results do not
-establish general SVD superiority or alpha.
+US sector ETFs: the primary volatility interval includes zero; the common-portfolio forecast-loss interval includes zero. The effect is conditional on this universe, fitted paths and historical period.
+
+Multi-asset ETFs: the primary volatility interval excludes zero; the common-portfolio forecast-loss interval includes zero. The effect is conditional on this universe, fitted paths and historical period.
+
+These results do not establish general SVD superiority or alpha. Compare the exposures and
+all declared sensitivities before interpreting a change in portfolio volatility economically.
 
 The notebooks show exposures, rolling factor structure, development/test comparisons and cost-aware
 wealth paths. Full daily results, block-length variants and provenance are under `outputs/`.

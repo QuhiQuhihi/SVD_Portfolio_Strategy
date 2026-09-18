@@ -14,8 +14,8 @@ and original teaching images remain available for comparison.
 
 The README and draft reference tracked publication figures, so they render without raw price
 data or `outputs/`. Do not point public Markdown at local Windows paths or ignored generated
-directories. Use the existing Git checkout to review, commit and push; this workspace snapshot
-does not contain usable Git metadata.
+directories. Review the local `renovation` branch against `old`. The latter preserves the starting source
+snapshot; prior Git history was unavailable. Push and publication remain separate actions.
 
 ## Prepare the Jekyll post
 

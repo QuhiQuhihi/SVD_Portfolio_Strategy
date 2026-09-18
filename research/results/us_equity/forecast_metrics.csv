@@ -1,0 +1,10 @@
+period,estimator,observations,mean_qlike,realized_over_predicted_variance
+all_oos,Ledoit-Wolf,1526,-8.18517140018,0.612124413633
+all_oos,PCA,1526,-8.17653422133,0.584471278952
+all_oos,Sample,1526,-8.17530618282,0.594530283187
+development,Ledoit-Wolf,1110,-8.131762637,0.538081999418
+development,PCA,1110,-8.11804843605,0.516107556537
+development,Sample,1110,-8.12166423058,0.523770128069
+historical_test,Ledoit-Wolf,416,-8.32768035963,1.11955234703
+historical_test,PCA,416,-8.33259004263,1.03684465426
+historical_test,Sample,416,-8.31843735344,1.07119784807

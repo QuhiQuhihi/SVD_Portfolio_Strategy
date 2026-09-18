@@ -20,7 +20,7 @@ from matplotlib.ticker import PercentFormatter  # noqa: E402
 
 from svd_portfolio.config import UNIVERSES, ResearchConfig  # noqa: E402
 from svd_portfolio.data import load_prices, sha256, simple_returns  # noqa: E402
-from svd_portfolio.research import source_fingerprint  # noqa: E402
+from svd_portfolio.validation import verify_manifest  # noqa: E402
 
 DESTINATION = ROOT / "docs" / "assets" / "svd"
 INK, BLUE, TEAL, ORANGE, GRAY = "#193549", "#dbeafe", "#d1fae5", "#ffedd5", "#e2e8f0"
@@ -207,14 +207,7 @@ def main():
         ("multi_asset", "weights"),
     ):
         source = ROOT / "outputs" / universe
-        manifest = json.loads((source / "manifest.json").read_text())
-        if manifest["source_sha256"] != source_fingerprint(ROOT):
-            raise ValueError(
-                "Research code changed; execute the notebooks before publishing figures"
-            )
-        for name, expected in manifest["tables_sha256"].items():
-            if sha256(source / name) != expected:
-                raise ValueError(f"Research table hash mismatch: {source / name}")
+        verify_manifest(ROOT, universe)
         for extension in ("png", "svg"):
             source_figure = source / "figures" / f"{figure}.{extension}"
             destination = DESTINATION / f"{universe}_{figure}.{extension}"
@@ -227,6 +220,11 @@ def main():
                     "research_manifest_sha256": sha256(source / "manifest.json"),
                 }
             )
+    # Matplotlib path data may include trailing spaces; keep generated diffs clean.
+    for path in DESTINATION.glob("*.svg"):
+        path.write_text("\n".join(line.rstrip() for line in path.read_text().splitlines()) + "\n")
+    for entry in exported:
+        entry["sha256"] = sha256(DESTINATION / entry["file"])
     provenance = {
         "generator": "scripts/build_article_assets.py",
         "generator_sha256": sha256(Path(__file__)),
