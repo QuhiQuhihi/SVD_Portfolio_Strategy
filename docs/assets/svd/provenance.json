@@ -1,0 +1,265 @@
+{
+  "generator": "scripts/build_article_assets.py",
+  "generator_sha256": "3a10709eeb723466894ff50364f62e815f7916ad1417dbab21f02a58085c1ca9",
+  "original_blog_images": [
+    {
+      "file": "originals/picture1.png",
+      "sha256": "11c2ff85c4c5cf895cb4bc8aebebdd3a5c85810c17b30681b686b582439d51af"
+    },
+    {
+      "file": "originals/picture2.png",
+      "sha256": "3468dca28e6c1e70d785d03c9cede4eb987f86af872bbad948dbc926f7b3f1ac"
+    },
+    {
+      "file": "originals/usequity_var_explained.png",
+      "sha256": "f28d23a1f441061654c85199fc80e64ee644582b3df98db0b181b32b87bb651e"
+    }
+  ],
+  "variance_illustration": {
+    "purpose": "Descriptive centered PCA using the original post's 10-ETF universe and dates",
+    "tickers": [
+      "XLB",
+      "XLC",
+      "XLE",
+      "XLF",
+      "XLI",
+      "XLK",
+      "XLP",
+      "XLU",
+      "XLV",
+      "XLY"
+    ],
+    "return_rows": 753,
+    "first_return": "2021-09-02",
+    "last_return": "2024-08-30",
+    "centering": "Column means estimated over this descriptive window",
+    "standardization": "None; covariance-space PCA",
+    "pc1_variance_share": 0.6171509683089864,
+    "first_three_share": 0.8545176362780181,
+    "snapshots": [
+      {
+        "ticker": "XLB",
+        "source": "Yahoo Finance via yfinance",
+        "source_url": "https://finance.yahoo.com/quote/XLB/history/",
+        "field": "Adj Close",
+        "auto_adjust": false,
+        "interval": "1d",
+        "start_inclusive": "2018-07-01",
+        "end_exclusive": "2026-09-01",
+        "retrieved_at_utc": "2026-09-17T14:55:23.914743+00:00",
+        "yfinance_version": "1.7.0",
+        "sha256": "88e126f5f2fcf61158166d02d9b068c305162da6e87608dbf21761c8eef47c5d",
+        "rows": 2052,
+        "first_date": "2018-07-02",
+        "last_date": "2026-08-31",
+        "caveat": "Current vintage, split/dividend-adjusted proxy; not point-in-time data."
+      },
+      {
+        "ticker": "XLC",
+        "source": "Yahoo Finance via yfinance",
+        "source_url": "https://finance.yahoo.com/quote/XLC/history/",
+        "field": "Adj Close",
+        "auto_adjust": false,
+        "interval": "1d",
+        "start_inclusive": "2018-07-01",
+        "end_exclusive": "2026-09-01",
+        "retrieved_at_utc": "2026-09-17T14:55:24.462685+00:00",
+        "yfinance_version": "1.7.0",
+        "sha256": "1cdbead27586f4c568b636dcfccff56e5b48ae8184db47f8442f477dbb8beccf",
+        "rows": 2052,
+        "first_date": "2018-07-02",
+        "last_date": "2026-08-31",
+        "caveat": "Current vintage, split/dividend-adjusted proxy; not point-in-time data."
+      },
+      {
+        "ticker": "XLE",
+        "source": "Yahoo Finance via yfinance",
+        "source_url": "https://finance.yahoo.com/quote/XLE/history/",
+        "field": "Adj Close",
+        "auto_adjust": false,
+        "interval": "1d",
+        "start_inclusive": "2018-07-01",
+        "end_exclusive": "2026-09-01",
+        "retrieved_at_utc": "2026-09-17T14:55:24.951048+00:00",
+        "yfinance_version": "1.7.0",
+        "sha256": "12bd2a7b695f5033879da3d8fb79f7e2b88b376c0a447e98ed2028a19d45b5d2",
+        "rows": 2052,
+        "first_date": "2018-07-02",
+        "last_date": "2026-08-31",
+        "caveat": "Current vintage, split/dividend-adjusted proxy; not point-in-time data."
+      },
+      {
+        "ticker": "XLF",
+        "source": "Yahoo Finance via yfinance",
+        "source_url": "https://finance.yahoo.com/quote/XLF/history/",
+        "field": "Adj Close",
+        "auto_adjust": false,
+        "interval": "1d",
+        "start_inclusive": "2018-07-01",
+        "end_exclusive": "2026-09-01",
+        "retrieved_at_utc": "2026-09-17T14:55:25.436301+00:00",
+        "yfinance_version": "1.7.0",
+        "sha256": "8bb5bbe713def62a898432b70498f45eb64e7356578ffbf3bd00ff2e0679de06",
+        "rows": 2052,
+        "first_date": "2018-07-02",
+        "last_date": "2026-08-31",
+        "caveat": "Current vintage, split/dividend-adjusted proxy; not point-in-time data."
+      },
+      {
+        "ticker": "XLI",
+        "source": "Yahoo Finance via yfinance",
+        "source_url": "https://finance.yahoo.com/quote/XLI/history/",
+        "field": "Adj Close",
+        "auto_adjust": false,
+        "interval": "1d",
+        "start_inclusive": "2018-07-01",
+        "end_exclusive": "2026-09-01",
+        "retrieved_at_utc": "2026-09-17T14:55:25.928785+00:00",
+        "yfinance_version": "1.7.0",
+        "sha256": "7f89a8558f05345e9db07fdfe4d90b535f34e5df6b0e613c1a5a5ee3204ffe24",
+        "rows": 2052,
+        "first_date": "2018-07-02",
+        "last_date": "2026-08-31",
+        "caveat": "Current vintage, split/dividend-adjusted proxy; not point-in-time data."
+      },
+      {
+        "ticker": "XLK",
+        "source": "Yahoo Finance via yfinance",
+        "source_url": "https://finance.yahoo.com/quote/XLK/history/",
+        "field": "Adj Close",
+        "auto_adjust": false,
+        "interval": "1d",
+        "start_inclusive": "2018-07-01",
+        "end_exclusive": "2026-09-01",
+        "retrieved_at_utc": "2026-09-17T14:55:26.475123+00:00",
+        "yfinance_version": "1.7.0",
+        "sha256": "43635308d1ca8b58061a278b0ea3e3825975d9d0c8234e6ba3278e6e5fb93ad7",
+        "rows": 2052,
+        "first_date": "2018-07-02",
+        "last_date": "2026-08-31",
+        "caveat": "Current vintage, split/dividend-adjusted proxy; not point-in-time data."
+      },
+      {
+        "ticker": "XLP",
+        "source": "Yahoo Finance via yfinance",
+        "source_url": "https://finance.yahoo.com/quote/XLP/history/",
+        "field": "Adj Close",
+        "auto_adjust": false,
+        "interval": "1d",
+        "start_inclusive": "2018-07-01",
+        "end_exclusive": "2026-09-01",
+        "retrieved_at_utc": "2026-09-17T14:55:26.968675+00:00",
+        "yfinance_version": "1.7.0",
+        "sha256": "4135258066e52510a22fcaac37f9b935599fc04c8d2b9d8c1ddb4d006e1a86d5",
+        "rows": 2052,
+        "first_date": "2018-07-02",
+        "last_date": "2026-08-31",
+        "caveat": "Current vintage, split/dividend-adjusted proxy; not point-in-time data."
+      },
+      {
+        "ticker": "XLU",
+        "source": "Yahoo Finance via yfinance",
+        "source_url": "https://finance.yahoo.com/quote/XLU/history/",
+        "field": "Adj Close",
+        "auto_adjust": false,
+        "interval": "1d",
+        "start_inclusive": "2018-07-01",
+        "end_exclusive": "2026-09-01",
+        "retrieved_at_utc": "2026-09-17T14:55:27.872179+00:00",
+        "yfinance_version": "1.7.0",
+        "sha256": "6fee888056c6e8945fc843c9b38d9b0d8a728ae6ec56322581ffb8813de9b687",
+        "rows": 2052,
+        "first_date": "2018-07-02",
+        "last_date": "2026-08-31",
+        "caveat": "Current vintage, split/dividend-adjusted proxy; not point-in-time data."
+      },
+      {
+        "ticker": "XLV",
+        "source": "Yahoo Finance via yfinance",
+        "source_url": "https://finance.yahoo.com/quote/XLV/history/",
+        "field": "Adj Close",
+        "auto_adjust": false,
+        "interval": "1d",
+        "start_inclusive": "2018-07-01",
+        "end_exclusive": "2026-09-01",
+        "retrieved_at_utc": "2026-09-17T14:55:28.426551+00:00",
+        "yfinance_version": "1.7.0",
+        "sha256": "6131c06b86ac31c3d5d2580cd1aae1e60638691a4b3783eb2e2c70231834bfd5",
+        "rows": 2052,
+        "first_date": "2018-07-02",
+        "last_date": "2026-08-31",
+        "caveat": "Current vintage, split/dividend-adjusted proxy; not point-in-time data."
+      },
+      {
+        "ticker": "XLY",
+        "source": "Yahoo Finance via yfinance",
+        "source_url": "https://finance.yahoo.com/quote/XLY/history/",
+        "field": "Adj Close",
+        "auto_adjust": false,
+        "interval": "1d",
+        "start_inclusive": "2018-07-01",
+        "end_exclusive": "2026-09-01",
+        "retrieved_at_utc": "2026-09-17T14:55:29.006850+00:00",
+        "yfinance_version": "1.7.0",
+        "sha256": "0fbe3f064f9060eb19389d2fb07ff899dfd0b1fdae9afd5d60b535c528560d6c",
+        "rows": 2052,
+        "first_date": "2018-07-02",
+        "last_date": "2026-08-31",
+        "caveat": "Current vintage, split/dividend-adjusted proxy; not point-in-time data."
+      }
+    ]
+  },
+  "research_figures": [
+    {
+      "file": "us_equity_volatility_intervals.png",
+      "source": "outputs/us_equity/figures/volatility_intervals.png",
+      "sha256": "8afb6403834da20de7520a77797503496383776744053542e989c60593f08191",
+      "research_manifest_sha256": "a906e51a707f5ad486279e1c2e2726620e6f352a97504aa0eab059ba85e3d2bb"
+    },
+    {
+      "file": "us_equity_volatility_intervals.svg",
+      "source": "outputs/us_equity/figures/volatility_intervals.svg",
+      "sha256": "207f120cad9049be4aaa0bd21dcfdee6c0741d6714f0976dd938b2f8a7b79f75",
+      "research_manifest_sha256": "a906e51a707f5ad486279e1c2e2726620e6f352a97504aa0eab059ba85e3d2bb"
+    },
+    {
+      "file": "us_equity_sensitivity.png",
+      "source": "outputs/us_equity/figures/sensitivity.png",
+      "sha256": "d67d58d6aad8837bd37c744f8c6f73f76495e3988cc0ae579eb0e69fcda0238a",
+      "research_manifest_sha256": "a906e51a707f5ad486279e1c2e2726620e6f352a97504aa0eab059ba85e3d2bb"
+    },
+    {
+      "file": "us_equity_sensitivity.svg",
+      "source": "outputs/us_equity/figures/sensitivity.svg",
+      "sha256": "f640a9961b62d671f88a202d13d95dd9e0e7307b346bcd106536eac5d4d8c16d",
+      "research_manifest_sha256": "a906e51a707f5ad486279e1c2e2726620e6f352a97504aa0eab059ba85e3d2bb"
+    },
+    {
+      "file": "multi_asset_weights.png",
+      "source": "outputs/multi_asset/figures/weights.png",
+      "sha256": "65953fbdebcdd764f54324eb9519061f93dd5c3aabdb06e5b4d36bebf27d2b55",
+      "research_manifest_sha256": "547ab0b27d5f9bf172e62272c77882dcaed73db4a818501d56864b330ab585dc"
+    },
+    {
+      "file": "multi_asset_weights.svg",
+      "source": "outputs/multi_asset/figures/weights.svg",
+      "sha256": "a460a99e5fc38e96c4f020c2f54c8dc3372c7beecf5c0deacec10f4ae3c68af6",
+      "research_manifest_sha256": "547ab0b27d5f9bf172e62272c77882dcaed73db4a818501d56864b330ab585dc"
+    }
+  ],
+  "publication_files": {
+    "multi_asset_weights.png": "65953fbdebcdd764f54324eb9519061f93dd5c3aabdb06e5b4d36bebf27d2b55",
+    "multi_asset_weights.svg": "a460a99e5fc38e96c4f020c2f54c8dc3372c7beecf5c0deacec10f4ae3c68af6",
+    "picture1.png": "8720a5b8bd272f15b67027d0bd2413a3869e4a23eebf016e3fc9b629b5da9b5c",
+    "picture1.svg": "67e45b93e8e1271c2d97521da7b3185df0b8426dc045a1e8a0da495f507bfdf7",
+    "picture2.png": "454a3542622928953ee30d2f6aa435ece9e091be1d6185ec7a199462f77148c7",
+    "picture2.svg": "15d3a9df56d788717e556ebc2c4c2099f81e7cf640b16ace16cb760025c9c0e0",
+    "us_equity_sensitivity.png": "d67d58d6aad8837bd37c744f8c6f73f76495e3988cc0ae579eb0e69fcda0238a",
+    "us_equity_sensitivity.svg": "f640a9961b62d671f88a202d13d95dd9e0e7307b346bcd106536eac5d4d8c16d",
+    "us_equity_volatility_intervals.png": "8afb6403834da20de7520a77797503496383776744053542e989c60593f08191",
+    "us_equity_volatility_intervals.svg": "207f120cad9049be4aaa0bd21dcfdee6c0741d6714f0976dd938b2f8a7b79f75",
+    "usequity_var_explained.png": "a8f5b10a94d252a365ef50631e5163744a6d145a2e60bc33d36ba13ae3fe947e",
+    "usequity_var_explained.svg": "c82587f79c0265f7fffe31e2f630499031e769bac3d6d14202e65c32b1be8cd3",
+    "variance_explained.csv": "548b88af914206c4fcfc3bb7507b33aa5a1f49e399753e91c2df2bff87792ec2"
+  }
+}
